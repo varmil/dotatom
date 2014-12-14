@@ -1,0 +1,54 @@
+# Your keymap
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+'.autocomplete-plus input.hidden-input':
+  'tab': 'autocomplete-plus:select-next'
+  'shift-tab': 'autocomplete-plus:select-previous'
+  'right': 'autocomplete-plus:cancel'
+  'enter': 'autocomplete-plus:confirm'
+
+'.platform-darwin, .platform-win32, .platform-linux':
+  'ctrl-g': 'go-to-line:unset!'
+
+'.workspace':
+  'ctrl-g': 'git-grep:grep'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-up': 'line-jumper:move-up'
+  'ctrl-down': 'line-jumper:move-down'
+  'alt-up': 'editor:move-line-up'
+  'alt-down': 'editor:move-line-down'
+  'ctrl-shift-D': 'editor:unset!'
+  'ctrl-shift-C': 'editor:duplicate-lines'
+
+'.editor':
+  'alt-up': 'line-jumper:unset!'
+  'alt-down': 'line-jumper:unset!'
+
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+#  'ctrl-d': 'find-and-replace:select-next'
+  'ctrl-d': 'editor:delete-line'
+
+'.platform-win32 .editor':
+  'ctrl-b': 'bookmarks:toggle-bookmark'
+
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/customizing-atom#customizing-key-bindings
+# * https://atom.io/docs/latest/advanced/keymaps
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it here:
+# https://github.com/bevry/cson#what-is-cson
